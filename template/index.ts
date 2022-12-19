@@ -13,8 +13,11 @@ function part2(input: string): string {
 function main() {
   const input = readFileSync(`${__dirname}/input.data`, "utf8");
 
-  console.log("Solution (Part 1):", part1(input));
-  console.log("Solution (Part 2):", part2(input));
+  console.log("\n=========");
+  console.log("\nSolution (Part 1):\n" + part1(input));
+  console.log("\n=========");
+  console.log("\nSolution (Part 2):\n" + part2(input));
+  console.log("\n=========");
 }
 
 main();

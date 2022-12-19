@@ -56,7 +56,11 @@ function extractCommands(rows: string[]): Command[] {
 
 function crateMover9000(command: Command, stacks: Stack[]): void {
   for (let i = 0; i < command.count; i++) {
-    stacks[command.to].push(stacks[command.from].pop());
+    const target = stacks[command.from].pop();
+
+    if (target) {
+      stacks[command.to].push(target);
+    }
   }
 }
 
@@ -93,8 +97,11 @@ function part2(input: string): string {
 function main() {
   const input = readFileSync(`${__dirname}/input.data`, "utf8");
 
-  console.log("Solution (Part 1):", part1(input));
-  console.log("Solution (Part 2):", part2(input));
+  console.log("\n=========");
+  console.log("\nSolution (Part 1):\n" + part1(input));
+  console.log("\n=========");
+  console.log("\nSolution (Part 2):\n" + part2(input));
+  console.log("\n=========");
 }
 
 main();
