@@ -3,6 +3,8 @@
     "strict": true,
     "target": "ESNext",
     "types": ["node"],
-    "noEmit": true
+    "moduleResolution": "node",
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true
   }
 }
