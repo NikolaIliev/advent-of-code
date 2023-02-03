@@ -13,14 +13,14 @@ type GameRound = {
   outcome: Outcome;
 };
 
-const win: Record<Choice, Choice> = {
+const StrongerToWeaker: Record<Choice, Choice> = {
   rock: "scissors",
   paper: "rock",
   scissors: "paper",
 };
 
 function getOutcome(us: Choice, them: Choice): Outcome {
-  return us === them ? "draw" : win[us] === them ? "win" : "lose";
+  return us === them ? "draw" : StrongerToWeaker[us] === them ? "win" : "lose";
 }
 
 const AllPossibleRounds: GameRound[] = choices.reduce((rounds, us) => {
