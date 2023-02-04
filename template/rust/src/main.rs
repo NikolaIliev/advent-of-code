@@ -1,5 +1,7 @@
 // https://adventofcode.com/%year%/day/%day%
 
+use std::fs;
+
 fn part1(input: &str) -> String {
     String::from("")
 }
